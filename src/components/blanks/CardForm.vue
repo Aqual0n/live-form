@@ -56,7 +56,7 @@ export default {
         const formData = computed(() => {
             return {
                 input: input.value,
-                selectedTab: tabs.activeTab,
+                selectedTab: tabs.activeTab.value,
             };
         });
 
