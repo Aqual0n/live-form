@@ -1,18 +1,23 @@
-<template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+<template lang="pug">
+div
+    card-form(
+        @submitForm="handleSubmitForm"
+    )
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import CardForm from '@/components/blanks/CardForm';
 
 export default {
-  name: "Home",
-  components: {
-    HelloWorld,
-  },
+    components: {
+        CardForm,
+    },
+    setup() {
+        const handleSubmitForm = (data) => {
+            console.log(data.value);
+            // axios
+        };
+        return { handleSubmitForm };
+    },
 };
 </script>
